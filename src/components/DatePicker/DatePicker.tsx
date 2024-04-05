@@ -3,6 +3,8 @@ import { useState } from "react"
 export type DatePickerTypes = {
   header: string
   buttonText: string
+  minDate: string
+  maxDate: string
   setDateChosed: (date: string) => void
   datePickerStyleRow: boolean
 }
@@ -10,15 +12,12 @@ export type DatePickerTypes = {
 const DatePicker: React.FC<DatePickerTypes> = ({
   header,
   buttonText,
+  minDate,
+  maxDate,
   setDateChosed,
   datePickerStyleRow,
 }) => {
-  const todayDate = new Date()
-  const today = `${todayDate.getFullYear()}-${
-    todayDate.getMonth() + 1
-  }-${todayDate.getDate()}`
-
-  const [date, setDate] = useState(today)
+  const [date, setDate] = useState("")
 
   const dateChosed = () => {
     setDateChosed(date)
@@ -32,7 +31,8 @@ const DatePicker: React.FC<DatePickerTypes> = ({
         type="date"
         name="datePicker"
         id="DatePicker"
-        value={date}
+        min={minDate}
+        max={maxDate}
         onChange={(e) => setDate(e.target.value)}
       />
       <button onClick={dateChosed}>{buttonText}</button>

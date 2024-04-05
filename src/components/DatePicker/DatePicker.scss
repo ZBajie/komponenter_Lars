@@ -19,10 +19,18 @@
     font-size: $font-size-secondary;
     padding: $padding-secondary;
     border-radius: $border-radius-primary;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  input[type="date"]:hover {
-    cursor: pointer;
+
+  [type="date"]::-webkit-calendar-picker-indicator {
+    &:hover {
+      cursor: pointer;
+      background-color: opacity($color: 60%);
+    }
   }
+
   button {
     background-color: $background-color-button-primary;
     color: $color-secondary;
@@ -31,9 +39,10 @@
     margin-top: $margin-primary;
     padding: $padding-secondary;
     border-radius: $border-radius-primary;
-  }
-  button:hover {
-    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 .datePickerStyleRow {
