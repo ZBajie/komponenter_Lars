@@ -11,12 +11,12 @@ function App() {
     <>
       <h1>Komponenter</h1>
       <DatePicker
-        header={"Pick your date!"}
+        labelText={"Pick your date!"}
         buttonText="Select Date!"
         minDate="2024-04-10"
         maxDate="2024-05-14"
         setDateChosed={setDateChosed}
-        datePickerStyleRow={false}
+        datePickerStyleRow={true}
       />
       <p>{date}</p>
     </>

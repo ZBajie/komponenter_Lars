@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export type DatePickerTypes = {
-  header: string
+  labelText: string
   buttonText: string
   minDate: string
   maxDate: string
@@ -10,7 +10,7 @@ export type DatePickerTypes = {
 }
 
 const DatePicker: React.FC<DatePickerTypes> = ({
-  header,
+  labelText,
   buttonText,
   minDate,
   maxDate,
@@ -26,7 +26,7 @@ const DatePicker: React.FC<DatePickerTypes> = ({
     <div
       className={`DatePicker ${datePickerStyleRow ? "datePickerStyleRow" : ""}`}
     >
-      <label htmlFor="DatePicker">{header}</label>
+      <label htmlFor="DatePicker">{labelText}</label>
       <input
         type="date"
         name="datePicker"
