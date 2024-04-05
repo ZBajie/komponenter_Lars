@@ -1,0 +1,60 @@
+.DatePicker {
+  width: fit-content;
+  background-color: $background-color-secondary;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  border-radius: $border-radius-primary;
+  display: flex;
+  flex-direction: column;
+  label {
+    background-color: $background-color-button-primary;
+    color: $color-secondary;
+    text-align: center;
+    font-size: $font-size-secondary;
+    margin-bottom: $margin-primary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+  }
+  input[type="date"] {
+    font-size: $font-size-secondary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+  }
+  input[type="date"]:hover {
+    cursor: pointer;
+  }
+  button {
+    background-color: $background-color-button-primary;
+    color: $color-secondary;
+
+    font-size: $font-size-secondary;
+    margin-top: $margin-primary;
+    padding: $padding-secondary;
+    border-radius: $border-radius-primary;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
+.datePickerStyleRow {
+  margin: $margin-primary;
+  padding: $padding-primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  label {
+    margin: $margin-primary;
+    padding: $padding-primary;
+  }
+  input[type="date"] {
+    margin: $margin-primary;
+    padding: $padding-primary;
+    border-radius: $border-radius-primary;
+  }
+
+  button {
+    margin: $margin-primary;
+    padding: $padding-primary;
+  }
+}
