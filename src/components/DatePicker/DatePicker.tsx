@@ -21,6 +21,7 @@ const DatePicker: React.FC<DatePickerTypes> = ({
 
   const dateChosed = () => {
     setDateChosed(date)
+    setDate("")
   }
   return (
     <div
@@ -33,6 +34,7 @@ const DatePicker: React.FC<DatePickerTypes> = ({
         id="DatePicker"
         min={minDate}
         max={maxDate}
+        value={date}
         onChange={(e) => setDate(e.target.value)}
       />
       <button onClick={dateChosed}>{buttonText}</button>

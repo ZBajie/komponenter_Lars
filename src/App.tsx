@@ -14,9 +14,9 @@ function App() {
         labelText={"Pick your date!"}
         buttonText="Select Date!"
         minDate="2024-04-10"
-        maxDate="2024-05-14"
+        maxDate="2025-05-14"
         setDateChosed={setDateChosed}
-        datePickerStyleRow={true}
+        datePickerStyleRow={false}
       />
       <p>{date}</p>
     </>
