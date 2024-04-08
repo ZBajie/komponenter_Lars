@@ -1,5 +1,6 @@
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
+import BentoMenu from "./components/BentoMenu/BentoMenu"
 
 function App() {
   const [date, setDate] = useState("")
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <h1>Komponenter</h1>
+      <BentoMenu/>
       <DatePicker
         labelText={"Pick your date!"}
         buttonText="Select Date!"
