@@ -1,8 +1,11 @@
 
+
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
 import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 import SearchBtn from "./components/SearchBtn/SearchBtn"
+        import MeatballMenu from "./components/meatballMenu/MeatballMenu";
+
 
 function App() {
   const [date, setDate] = useState("");
@@ -23,7 +26,11 @@ function App() {
       />
       <DragAndDrop />
       <p>{date}</p>
+
+      <MeatballMenu />
+
       <SearchBtn />
+
     </>
   );
 }
