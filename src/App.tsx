@@ -1,11 +1,12 @@
-import { useState } from "react"
-import DatePicker from "./components/DatePicker/DatePicker"
+import { useState } from "react";
+import DatePicker from "./components/DatePicker/DatePicker";
+import SearchBtn from "./components/SearchBtn/SearchBtn";
 
 function App() {
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("");
   const setDateChosed = (date: string) => {
-    setDate(date)
-  }
+    setDate(date);
+  };
 
   return (
     <>
@@ -19,8 +20,9 @@ function App() {
         datePickerStyleRow={true}
       />
       <p>{date}</p>
+      <SearchBtn />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
