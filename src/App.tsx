@@ -2,9 +2,11 @@
 
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
+
 import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 import SearchBtn from "./components/SearchBtn/SearchBtn"
         import MeatballMenu from "./components/meatballMenu/MeatballMenu";
+import BentoMenu from "./components/BentoMenu/BentoMenu"
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
   return (
     <>
       <h1>Komponenter</h1>
+      <BentoMenu/>
       <DatePicker
         labelText={"Pick your date!"}
         buttonText="Select Date!"
