@@ -14,6 +14,10 @@ For styling there is one prop that will be sent to the component, its for choosi
 
 The styling is made in a scss file and uses variables.
 
+## Spinner
+
+The spinner component is a copy from https://blog.hubspot.com/website/css-animation-examples
+
 ## React + TypeScript + Vite
 
 npm install

@@ -5,6 +5,7 @@ import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 import SearchBtn from "./components/SearchBtn/SearchBtn"
 import MeatballMenu from "./components/meatballMenu/MeatballMenu"
 import BentoMenu from "./components/BentoMenu/BentoMenu"
+import Spinner from "./components/Spinner/Spinner"
 
 function App() {
   const [date, setDate] = useState("")
@@ -17,6 +18,7 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <Spinner />
       <DatePicker
         labelText={"Pick your date!"}
         buttonText="Select Date!"
