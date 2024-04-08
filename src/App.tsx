@@ -1,6 +1,8 @@
-import { useState } from "react";
-import DatePicker from "./components/DatePicker/DatePicker";
-import SearchBtn from "./components/SearchBtn/SearchBtn";
+
+import { useState } from "react"
+import DatePicker from "./components/DatePicker/DatePicker"
+import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
+import SearchBtn from "./components/SearchBtn/SearchBtn"
 
 function App() {
   const [date, setDate] = useState("");
@@ -15,10 +17,11 @@ function App() {
         labelText={"Pick your date!"}
         buttonText="Select Date!"
         minDate="2024-04-10"
-        maxDate="2024-05-14"
+        maxDate="2025-05-14"
         setDateChosed={setDateChosed}
-        datePickerStyleRow={true}
+        datePickerStyleRow={false}
       />
+      <DragAndDrop />
       <p>{date}</p>
       <SearchBtn />
     </>
