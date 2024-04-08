@@ -1,11 +1,12 @@
-import { useState } from "react"
-import DatePicker from "./components/DatePicker/DatePicker"
+import { useState } from "react";
+import DatePicker from "./components/DatePicker/DatePicker";
+import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 
 function App() {
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("");
   const setDateChosed = (date: string) => {
-    setDate(date)
-  }
+    setDate(date);
+  };
 
   return (
     <>
@@ -19,8 +20,9 @@ function App() {
         datePickerStyleRow={false}
       />
       <p>{date}</p>
+      <MeatballMenu />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
