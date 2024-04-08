@@ -1,12 +1,14 @@
+
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
 import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
+import SearchBtn from "./components/SearchBtn/SearchBtn"
 
 function App() {
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("");
   const setDateChosed = (date: string) => {
-    setDate(date)
-  }
+    setDate(date);
+  };
 
   return (
     <>
@@ -21,8 +23,9 @@ function App() {
       />
       <DragAndDrop />
       <p>{date}</p>
+      <SearchBtn />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
