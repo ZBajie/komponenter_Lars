@@ -1,5 +1,6 @@
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
+import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 
 function App() {
   const [date, setDate] = useState("")
@@ -18,6 +19,7 @@ function App() {
         setDateChosed={setDateChosed}
         datePickerStyleRow={false}
       />
+      <DragAndDrop />
       <p>{date}</p>
     </>
   )
