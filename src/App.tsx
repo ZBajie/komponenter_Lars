@@ -1,12 +1,19 @@
+
+
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
+
+import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
+import SearchBtn from "./components/SearchBtn/SearchBtn"
+        import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 import BentoMenu from "./components/BentoMenu/BentoMenu"
 
+
 function App() {
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("");
   const setDateChosed = (date: string) => {
-    setDate(date)
-  }
+    setDate(date);
+  };
 
   return (
     <>
@@ -20,9 +27,15 @@ function App() {
         setDateChosed={setDateChosed}
         datePickerStyleRow={false}
       />
+      <DragAndDrop />
       <p>{date}</p>
+
+      <MeatballMenu />
+
+      <SearchBtn />
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
