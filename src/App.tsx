@@ -1,24 +1,22 @@
-
-
 import { useState } from "react"
 import DatePicker from "./components/DatePicker/DatePicker"
 
 import { DragAndDrop } from "./components/DragDrop/DragAndDrop"
 import SearchBtn from "./components/SearchBtn/SearchBtn"
-        import MeatballMenu from "./components/meatballMenu/MeatballMenu";
+import MeatballMenu from "./components/meatballMenu/MeatballMenu"
 import BentoMenu from "./components/BentoMenu/BentoMenu"
 
-
 function App() {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState("")
   const setDateChosed = (date: string) => {
-    setDate(date);
-  };
+    setDate(date)
+  }
 
   return (
     <>
       <h1>Komponenter</h1>
-      <BentoMenu/>
+      <BentoMenu />
+      <MeatballMenu />
       <DatePicker
         labelText={"Pick your date!"}
         buttonText="Select Date!"
@@ -27,15 +25,11 @@ function App() {
         setDateChosed={setDateChosed}
         datePickerStyleRow={false}
       />
-      <DragAndDrop />
       <p>{date}</p>
-
-      <MeatballMenu />
-
-      <SearchBtn />
-
+      <DragAndDrop />
+      <SearchBtn placeholder="test" />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

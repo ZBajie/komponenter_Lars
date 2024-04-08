@@ -1,12 +1,12 @@
-import React from "react";
-import "./SearchBtn.scss";
-import JSConfetti from "js-confetti";
+import React from "react"
+import "./SearchBtn.scss"
+import JSConfetti from "js-confetti"
 
 type SearchBtnProps = {
-  placeholder?: string;
-  onSearch?: () => void;
-  onKeyPress?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
-};
+  placeholder?: string
+  onSearch?: () => void
+  onKeyPress?: (event: React.KeyboardEvent<HTMLInputElement>) => void
+}
 
 const SearchBtn: React.FC<SearchBtnProps> = ({
   placeholder,
@@ -15,25 +15,25 @@ const SearchBtn: React.FC<SearchBtnProps> = ({
 }) => {
   const handleSearch = () => {
     if (onSearch) {
-      onSearch();
+      onSearch()
     }
-  };
+  }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("Input value:", event.target.value);
-    const jsConfetti = new JSConfetti();
+    console.log("Input value:", event.target.value)
+    const jsConfetti = new JSConfetti()
     jsConfetti.addConfetti({
       emojis: ["🍆", "🥜"],
       confettiNumber: 100,
-    });
-  };
+    })
+  }
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && onKeyPress) {
-      onKeyPress(event);
-      event.preventDefault();
+      onKeyPress(event)
+      event.preventDefault()
     }
-  };
+  }
 
   return (
     <div>
@@ -66,7 +66,7 @@ const SearchBtn: React.FC<SearchBtnProps> = ({
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SearchBtn;
+export default SearchBtn
