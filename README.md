@@ -14,6 +14,14 @@ For styling there is one prop that will be sent to the component, its for choosi
 
 The styling is made in a scss file and uses variables.
 
+## Calender
+
+Made a calender component from scratch. With new Date().
+
+It seems to work for showing the dates and pick 1 date.
+
+Still working on style.
+
 ## Spinner
 
 The spinner component is a copy from https://blog.hubspot.com/website/css-animation-examples
