@@ -1,0 +1,48 @@
+.calender {
+  background-color: $background-color-primary;
+  width: fit-content;
+  margin: $margin-secondary;
+  padding: $padding-primary;
+  border: 5px solid $background-color-secondary;
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      background-color: $background-color-secondary;
+      color: $color-secondary;
+      margin: $margin-primary;
+      padding: $padding-primary;
+      border-radius: $border-radius-primary;
+      &:hover {
+        cursor: pointer;
+        padding: $padding-primary * 1.1;
+        box-shadow: 5px 5px 5px $background-color-secondary;
+        transition: all 0.5s;
+        &:active {
+          background-color: $background-color-primary;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+  .calender-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    div {
+      padding: $padding-primary;
+      text-align: center;
+      &:nth-child(n + 8) {
+        &:hover {
+          cursor: pointer;
+          box-shadow: 5px 5px 5px $background-color-secondary;
+          transition: box-shadow 0.8s;
+        }
+        &:active {
+          background-color: $background-color-secondary;
+          transition: background-color 0.8s;
+        }
+      }
+    }
+  }
+}

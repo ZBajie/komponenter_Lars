@@ -6,6 +6,7 @@ import SearchBtn from "./components/SearchBtn/SearchBtn"
 import MeatballMenu from "./components/meatballMenu/MeatballMenu"
 import BentoMenu from "./components/BentoMenu/BentoMenu"
 import Spinner from "./components/Spinner/Spinner"
+import Calender from "./components/Calender/Calender"
 
 function App() {
   const [date, setDate] = useState("")
@@ -18,6 +19,7 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <Calender />
       <Spinner />
       <DatePicker
         labelText={"Pick your date!"}
