@@ -1,0 +1,27 @@
+.radio-button {
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  background-color: $background-color-primary;
+  width: fit-content;
+
+  h2 {
+    padding: $padding-secondary;
+  }
+  input {
+    margin-left: $margin-secondary;
+    transition: all 2s;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      color: aqua;
+    }
+    &:checked {
+      background-color: aqua;
+    }
+  }
+  label {
+    margin-left: $margin-primary;
+  }
+}
