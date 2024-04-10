@@ -7,6 +7,8 @@ import MeatballMenu from "./components/meatballMenu/MeatballMenu"
 import BentoMenu from "./components/BentoMenu/BentoMenu"
 import Spinner from "./components/Spinner/Spinner"
 import Calender from "./components/Calender/Calender"
+import RadioButton from "./components/RadioButton/RadioButton"
+import CheckBox from "./components/CheckBox/CheckBox"
 
 function App() {
   const [date, setDate] = useState("")
@@ -19,6 +21,8 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <CheckBox />
+      <RadioButton />
       <Calender setDateChosed={setDateChosed} />
       <Spinner />
       <DatePicker
