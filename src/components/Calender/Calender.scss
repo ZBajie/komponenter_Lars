@@ -14,15 +14,14 @@
       margin: $margin-primary;
       padding: $padding-primary;
       border-radius: $border-radius-primary;
+      transition: all 0.5s;
       &:hover {
         cursor: pointer;
         padding: $padding-primary * 1.1;
         box-shadow: 5px 5px 5px $background-color-secondary;
-        transition: all 0.5s;
-        &:active {
-          background-color: $background-color-primary;
-          transition: all 0.5s;
-        }
+      }
+      &:active {
+        background-color: $background-color-primary;
       }
     }
   }

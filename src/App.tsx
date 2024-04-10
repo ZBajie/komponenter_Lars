@@ -19,7 +19,7 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
-      <Calender />
+      <Calender setDateChosed={setDateChosed} />
       <Spinner />
       <DatePicker
         labelText={"Pick your date!"}

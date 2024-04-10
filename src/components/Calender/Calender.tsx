@@ -1,11 +1,14 @@
 import { useState } from "react"
 
-const Calender = () => {
-  const [dateChosed, setDateChosed] = useState<Date>()
+type CalenderTypes = {
+  setDateChosed: (date: string) => void
+}
+
+const Calender: React.FC<CalenderTypes> = ({ setDateChosed }) => {
+  const [dateChosedLocal, setDateChosedLocal] = useState<Date>()
   const date = new Date()
   const [year, setYear] = useState(date.getFullYear())
   const [month, setMonth] = useState(date.getMonth())
-  const day = date.getDate()
 
   const daysInMonth = new Date(year, month + 1, 0).getDate()
   let firstDay = new Date(year, month, 1).getDay()
@@ -22,7 +25,8 @@ const Calender = () => {
       <div
         key={i + firstDay}
         onClick={() => {
-          setDateChosed(new Date(year, month, i + 1))
+          setDateChosedLocal(new Date(year, month, i + 1))
+          setDateChosed(new Date(year, month, i + 1).toLocaleDateString())
         }}
       >
         {i + 1}
@@ -45,13 +49,6 @@ const Calender = () => {
   ]
   return (
     <>
-      <p>{date.toLocaleTimeString()}</p>
-      <p>{date.toLocaleDateString()}</p>
-      <p>{year}</p>
-      <p>{month}</p>
-      <p>{day}</p>
-      <p>days in month: {daysInMonth}</p>
-      <p>first day in month: {firstDay}</p>
       <section className="calender">
         <header>
           <button
@@ -93,7 +90,7 @@ const Calender = () => {
           {calenderDays}
         </div>
       </section>
-      <h1>{dateChosed?.toDateString()}</h1>
+      <h1>{dateChosedLocal?.toLocaleDateString()}</h1>
     </>
   )
 }
