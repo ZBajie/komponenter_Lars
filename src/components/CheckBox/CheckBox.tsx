@@ -1,6 +1,10 @@
 import { useState } from "react"
 
-const CheckBox = () => {
+type CheckBoxType = {
+  onClick: () => void
+}
+
+const CheckBox: React.FC<CheckBoxType> = ({ onClick }) => {
   const [checkBoxClicked, setCheckBoxClick] = useState(false)
   return (
     <section className="checkbox">
@@ -9,6 +13,7 @@ const CheckBox = () => {
         className={`${checkBoxClicked && "checkbox-clicked"}`}
         onClick={() => {
           setCheckBoxClick(!checkBoxClicked)
+          onClick
         }}
       ></div>
     </section>
