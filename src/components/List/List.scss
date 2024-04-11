@@ -1,0 +1,58 @@
+.list {
+  width: fit-content;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+
+  background-color: $background-color-primary;
+
+  div {
+    margin: $margin-secondary;
+    label {
+      padding: $padding-primary;
+      font-size: $font-size-tertiary;
+    }
+    input {
+      padding: $padding-primary;
+    }
+    button {
+      @include button-base;
+      bottom: unset;
+      transition: all 1s;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px 10px $box-shadow-color-primary;
+      }
+      &:active {
+        background-color: $button-background-color-active;
+      }
+      &:disabled {
+        background-color: $disabled-color-primary;
+        font-size: $font-size-small;
+        cursor: default;
+        box-shadow: 5px 5px 5px $box-shadow-color-primary;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+
+    li {
+      text-transform: capitalize;
+      padding: $padding-primary;
+      border: 2px solid $background-color-secondary;
+      box-shadow: 5px 5px 5px $box-shadow-color-primary;
+      cursor: default;
+      animation: listAnimation 2s ease-in-out;
+    }
+  }
+}
+
+@keyframes listAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
