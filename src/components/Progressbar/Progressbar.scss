@@ -1,0 +1,15 @@
+.progressbar {
+  background-color: $background-color-primary;
+  width: fit-content;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  h2 {
+    text-align: center;
+    margin-bottom: $margin-secondary;
+  }
+  .bar {
+    transition: all 2s;
+    height: 25px;
+    background-color: $background-color-secondary;
+  }
+}

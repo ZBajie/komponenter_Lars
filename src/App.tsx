@@ -10,6 +10,7 @@ import Calender from "./components/Calender/Calender"
 import RadioButton from "./components/RadioButton/RadioButton"
 import CheckBox from "./components/CheckBox/CheckBox"
 import List from "./components/List/List"
+import Progressbar from "./components/Progressbar/Progressbar"
 
 function App() {
   const [date, setDate] = useState("")
@@ -22,6 +23,7 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <Progressbar />
       <List />
       <CheckBox />
       <RadioButton />
