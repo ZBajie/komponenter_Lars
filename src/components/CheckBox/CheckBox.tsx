@@ -13,7 +13,7 @@ const CheckBox: React.FC<CheckBoxType> = ({ onClick }) => {
         className={`${checkBoxClicked && "checkbox-clicked"}`}
         onClick={() => {
           setCheckBoxClick(!checkBoxClicked)
-          onClick
+          onClick()
         }}
       ></div>
     </section>
