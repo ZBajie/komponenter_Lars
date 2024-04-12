@@ -11,6 +11,7 @@ import RadioButton from "./components/RadioButton/RadioButton"
 import CheckBox from "./components/CheckBox/CheckBox"
 import List from "./components/List/List"
 import Progressbar from "./components/Progressbar/Progressbar"
+import DropDown from "./components/DropDown/DropDown"
 
 function App() {
   const [date, setDate] = useState("")
@@ -23,9 +24,10 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <DropDown />
       <Progressbar />
       <List />
-      <CheckBox />
+      <CheckBox onClick={() => {}} />
       <RadioButton />
       <Calender setDateChosed={setDateChosed} />
       <Spinner />

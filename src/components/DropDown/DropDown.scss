@@ -1,0 +1,18 @@
+.dropdown {
+  width: fit-content;
+  margin: $margin-secondary;
+  div {
+    background-color: $background-color-primary;
+    padding: $padding-primary;
+    &:last-child {
+      background-color: aqua;
+      margin: 0;
+      display: none;
+      transition: height 2s ease-in-out;
+    }
+    &.dropdown {
+      width: 100%;
+      display: block;
+    }
+  }
+}
