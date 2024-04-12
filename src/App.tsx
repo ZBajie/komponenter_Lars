@@ -8,9 +8,22 @@ import BentoMenu from "./components/BentoMenu/BentoMenu"
 import Spinner from "./components/Spinner/Spinner"
 import Calender from "./components/Calender/Calender"
 import RadioButton from "./components/RadioButton/RadioButton"
-import CheckBox from "./components/CheckBox/CheckBox"
+// import CheckBox from "./components/CheckBox/CheckBox"
 import List from "./components/List/List"
 import Progressbar from "./components/Progressbar/Progressbar"
+import Navbar from "./components/Navbar/NavBar"
+
+
+//-------------------------------------------NavBar-----------------------------------------------//
+const GoToNavLink = [
+  { Text: 'Home', href: '/#' },
+  { Text: 'About oss', href: '/#' },
+  { Text: 'Contakt oss', href: '/#' },
+  { Text: 'Different services', href: '/#' },
+  { Text: 'Cooperate with oss', href: '/#' }
+];
+
+//------------------------------------------------------------------------------------------//
 
 function App() {
   const [date, setDate] = useState("")
@@ -20,12 +33,13 @@ function App() {
 
   return (
     <>
+      <Navbar GoToNavLink={GoToNavLink} />
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
       <Progressbar />
       <List />
-      <CheckBox />
+      {/* <CheckBox /> */}
       <RadioButton />
       <Calender setDateChosed={setDateChosed} />
       <Spinner />
