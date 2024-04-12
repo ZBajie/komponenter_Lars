@@ -13,6 +13,7 @@ import List from "./components/List/List"
 import Progressbar from "./components/Progressbar/Progressbar"
 import Navbar from "./components/Navbar/NavBar"
 import ShareButton from "./components/ShareButton/ShareButton"
+import DropDown from "./components/DropDown/DropDown"
 
 //-------------------------------------------NavBar-----------------------------------------------//
 const GoToNavLink = [
@@ -49,9 +50,10 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
+      <DropDown />
       <Progressbar />
       <List />
-      <CheckBox />
+      <CheckBox onClick={() => {}} />
       <RadioButton />
       <Calender setDateChosed={setDateChosed} />
       <Spinner />
