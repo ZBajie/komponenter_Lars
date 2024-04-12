@@ -1,18 +1,48 @@
 .dropdown {
   width: fit-content;
   margin: $margin-secondary;
+  display: flex;
+  flex-direction: column;
+  &.dropdown-top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  &.dropdown-top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  &.dropdown-bottom-left {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+  &.dropdown-bottom-right {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
   div {
     background-color: $background-color-primary;
     padding: $padding-primary;
-    &:last-child {
-      background-color: aqua;
-      margin: 0;
-      display: none;
-      transition: height 2s ease-in-out;
+    &:first-child {
+      cursor: pointer;
+      &:hover {
+        box-shadow: 5px 5px 5px $box-shadow-color-primary;
+      }
+      &:active {
+        box-shadow: none;
+      }
     }
-    &.dropdown {
-      width: 100%;
-      display: block;
+    &:last-child {
+      margin: 0;
+      padding: 0;
+      transition: height 1s ease-in-out;
+    }
+    &.dropdown-under {
+      order: -1;
     }
   }
 }

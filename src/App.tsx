@@ -50,7 +50,11 @@ function App() {
       <h1>Komponenter</h1>
       <BentoMenu />
       <MeatballMenu />
-      <DropDown />
+      <DropDown
+        dropdownUnder={false}
+        dropdownTop={false}
+        dropdownLeft={false}
+      />
       <Progressbar />
       <List />
       <CheckBox onClick={() => {}} />
