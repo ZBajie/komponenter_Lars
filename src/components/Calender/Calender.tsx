@@ -21,12 +21,17 @@ const Calender: React.FC<CalenderTypes> = ({ setDateChosed }) => {
     calenderDays.push(<div key={i}></div>)
   }
   for (let i = 0; i < daysInMonth; i++) {
+    const currentDate = new Date(year, month, i + 1)
+    const selected =
+      currentDate.toDateString() === dateChosedLocal?.toDateString()
+
     calenderDays.push(
       <div
         key={i + firstDay}
+        className={selected ? "selected" : ""}
         onClick={() => {
           setDateChosedLocal(new Date(year, month, i + 1))
-          setDateChosed(new Date(year, month, i + 1).toLocaleDateString())
+          setDateChosed(`${year}-${month + 1}-${i + 1}`)
         }}
       >
         {i + 1}

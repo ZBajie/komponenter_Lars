@@ -34,13 +34,17 @@
       &:nth-child(n + 8) {
         &:hover {
           cursor: pointer;
-          box-shadow: 5px 5px 5px $background-color-secondary;
+          box-shadow: 5px 5px 5px $box-shadow-color-primary;
           transition: box-shadow 0.8s;
         }
         &:active {
           background-color: $background-color-secondary;
           transition: background-color 0.8s;
         }
+      }
+      &.selected {
+        background-color: $background-color-secondary;
+        box-shadow: 5px 5px 5px $box-shadow-color-primary;
       }
     }
   }
