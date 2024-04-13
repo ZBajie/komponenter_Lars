@@ -20,7 +20,27 @@ Made a calender component from scratch. With new Date().
 
 It seems to work for showing the dates and pick 1 date.
 
-Still working on style.
+The parent need a function that handle the date prop.
+
+## Checkbox component
+
+A styled check box component that send a onClick function to parent component.
+
+## Progressbar component
+
+A progressbar with 4 Checkbox components that slide 25% for every checkbox clicked.
+
+## List Component
+
+Write a text that will be added to the list.
+
+## Dropdown Component
+
+A dropdown component that can be placed in every corner and slide up or down.
+
+## Radio button component
+
+Only started on it. Not finished.
 
 ## Spinner
 
@@ -31,37 +51,35 @@ The spinner component is a copy from https://blog.hubspot.com/website/css-animat
 npm install
 npm run dev
 
-
-**************************************************************************************************************
+---
 
 # Information if you want to use all the icons intended for this Navbar
-* You need to install a patch which is
 
-- * npm install react-icons
+- You need to install a patch which is
+
+* - npm install react-icons
 
 ## then import from the following link
-* import { FaBars, FaTimes } from "react-icons/fa";
 
+- import { FaBars, FaTimes } from "react-icons/fa";
 
+* if you want to check more icons, go to =>
+  https://react-icons-v2.vercel.app/
 
-- if you want to check more icons, go to =>
-https://react-icons-v2.vercel.app/
+---
 
-**************************************************************************************************************
+# If you want to use the share button code.
 
+- And you want to change the link where it should go, and if you want to change icons,
+  need to make changes in three places,
 
-# If you want to use the share button code. 
+- 1 App.tsx => here you change link to icon
 
-* And you want to change the link where it should go, and if you want to change icons,
-need to make changes in three places, 
+- 2 buttens.scss => from line 118 downwards, you change the name of the link as well as the color name,
 
-* 1 App.tsx => here you change link to icon
+- 3 \_colors.scss => here you change the color code for the icon and what it should be called.
 
-* 2 buttens.scss => from line 118 downwards, you change the name of the link as well as the color name,
- 
-* 3 _colors.scss => here you change the color code for the icon and what it should be called.
+- I recommend that you check this link =>
+  https://remixicon.com/
 
-* I recommend that you check this link => 
-https://remixicon.com/
-
-**************************************************************************************************************
+---
