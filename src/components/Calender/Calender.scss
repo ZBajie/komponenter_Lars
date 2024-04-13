@@ -31,6 +31,7 @@
     div {
       padding: $padding-primary;
       text-align: center;
+      transition: background-color 0.8s;
       &:nth-child(n + 8) {
         &:hover {
           cursor: pointer;
